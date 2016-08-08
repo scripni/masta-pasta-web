@@ -4,4 +4,9 @@
 <div>
 	<label>name:</label>
 	<input [(ngModel)]="recipe.name" placeholder="name" />
+	<ul>
+		<li *ngFor="#ingredient of recipe.ingredients">
+			{{ ingredient.name }}
+		</li>
+	</ul>
 </div>

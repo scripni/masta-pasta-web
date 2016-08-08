@@ -1,8 +1,14 @@
 import { Component } from '@angular/core';
 
+export class Ingredient {
+	id: number;
+	name: string;
+}
+
 export class Recipe {
 	id: number;
 	name: string;
+	ingredients: Ingredient[];
 }
 
 @Component({
@@ -13,6 +19,16 @@ export class AppComponent {
 	title = 'Masta Pasta';
 	recipe: Recipe = {
 		id: 1,
-		name: 'Pasta'
+		name: 'Pasta',
+		ingredients: [
+			{
+				id: 1,
+				name: 'Rosemary'
+			},
+			{
+				id: 2,
+				name: 'Bacon'
+			}
+		]
 	};
 }
