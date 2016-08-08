@@ -38,3 +38,7 @@ jspm_packages
 
 # typescript definitions
 typings/
+
+# compiled javascript
+app/*.js
+app/*.js.map
