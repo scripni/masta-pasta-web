@@ -1,6 +1,26 @@
 import { Component } from '@angular/core';
+
+export class Recipe {
+	id: number;
+	name: string;
+}
+
 @Component({
-  selector: 'my-app',
-  template: '<h1>My First Angular 2 App</h1>'
+  selector: 'masta-pasta',
+  template: `
+  <h1>{{title}}</h1>
+  <h2>{{recipe.name}} details</h2>
+  <div><label>id:</label>{{recipe.id}}</div>
+  <div>
+  	<label>name:</label>
+  	<input [(ngModel)]="recipe.name" placeholder="name" />
+  </div>
+  `
 })
-export class AppComponent { }
+export class AppComponent {
+	title = 'Masta Pasta';
+	recipe: Recipe = {
+		id: 1,
+		name: 'Pasta'
+	};
+}
