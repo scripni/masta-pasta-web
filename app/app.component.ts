@@ -7,15 +7,7 @@ export class Recipe {
 
 @Component({
   selector: 'masta-pasta',
-  template: `
-  <h1>{{title}}</h1>
-  <h2>{{recipe.name}} details</h2>
-  <div><label>id:</label>{{recipe.id}}</div>
-  <div>
-  	<label>name:</label>
-  	<input [(ngModel)]="recipe.name" placeholder="name" />
-  </div>
-  `
+  templateUrl: 'views/app.html'
 })
 export class AppComponent {
 	title = 'Masta Pasta';
